@@ -12,6 +12,13 @@
 		39E58B4125A1BB2C00349ABA /* EmojiRangersWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E58B4025A1BB2C00349ABA /* EmojiRangersWidget.swift */; };
 		39E58B4325A1BB2D00349ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E58B4225A1BB2D00349ABA /* Assets.xcassets */; };
 		39E58B4725A1BB2D00349ABA /* EmojiRangersWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 39E58B3C25A1BB2C00349ABA /* EmojiRangersWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		39E58B5225A1BB9D00349ABA /* ImageURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F9E2498199400137818 /* ImageURLProtocol.swift */; };
+		39E58B5325A1BB9D00349ABA /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F992498199300137818 /* AvatarView.swift */; };
+		39E58B5425A1BB9D00349ABA /* CharacterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F9B2498199300137818 /* CharacterNameView.swift */; };
+		39E58B5525A1BB9D00349ABA /* AllCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F9C2498199300137818 /* AllCharactersView.swift */; };
+		39E58B5625A1BB9D00349ABA /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F952498199300137818 /* CharacterDetail.swift */; };
+		39E58B5725A1BB9D00349ABA /* GameColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F982498199300137818 /* GameColors.swift */; };
+		39E58B5825A1BB9D00349ABA /* HealthLevelShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F9A2498199300137818 /* HealthLevelShape.swift */; };
 		43D58F9F2498199400137818 /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F952498199300137818 /* CharacterDetail.swift */; };
 		43D58FA12498199400137818 /* GameColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F982498199300137818 /* GameColors.swift */; };
 		43D58FA22498199400137818 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D58F992498199300137818 /* AvatarView.swift */; };
@@ -328,7 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E58B5825A1BB9D00349ABA /* HealthLevelShape.swift in Sources */,
+				39E58B5625A1BB9D00349ABA /* CharacterDetail.swift in Sources */,
 				39E58B4125A1BB2C00349ABA /* EmojiRangersWidget.swift in Sources */,
+				39E58B5725A1BB9D00349ABA /* GameColors.swift in Sources */,
+				39E58B5325A1BB9D00349ABA /* AvatarView.swift in Sources */,
+				39E58B5225A1BB9D00349ABA /* ImageURLProtocol.swift in Sources */,
+				39E58B5525A1BB9D00349ABA /* AllCharactersView.swift in Sources */,
+				39E58B5425A1BB9D00349ABA /* CharacterNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
