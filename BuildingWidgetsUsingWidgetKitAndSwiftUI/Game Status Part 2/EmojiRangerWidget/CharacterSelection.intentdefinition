@@ -45,6 +45,16 @@
 					<key>INEnumValueName</key>
 					<string>egghead</string>
 				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Spouty</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>Yv9zJ7</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>spouty</string>
+				</dict>
 			</array>
 		</dict>
 	</array>
@@ -53,11 +63,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>20A4299k</string>
+	<string>20B50</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12A6155</string>
+	<string>12B45b</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.0</string>
+	<string>12.2</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
