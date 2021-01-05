@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Provider: IntentTimelineProvider {
     
-    typealias Intent = CharacterSelectionIntent
+    typealias Intent = DynamicCharacterSelectionIntent
     
     public typealias Entry = SimpleEntry
     
@@ -18,13 +18,13 @@ struct Provider: IntentTimelineProvider {
         return SimpleEntry(date: Date(), relevance: nil, character: .panda)
     }
     
-    func getSnapshot(for configuration: CharacterSelectionIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
+    func getSnapshot(for configuration: DynamicCharacterSelectionIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: Date(), relevance: nil, character: .panda)
         completion(entry)
     }
     
-    func getTimeline(for configuration: CharacterSelectionIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
-        let selectedCharacter = character(for: configuration)
+    func getTimeline(for configuration: DynamicCharacterSelectionIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+        guard let selectedCharacter = CharacterDetail.characterFromName(name: configuration.hero?.identifier) else { return }
         let endDate = selectedCharacter.fullHealthDate
         let oneMinute: TimeInterval = 60
         var currentDate = Date()
@@ -43,18 +43,19 @@ struct Provider: IntentTimelineProvider {
         completion(timeline)
     }
     
-    func character(for configuration: CharacterSelectionIntent) -> CharacterDetail {
-        switch configuration.hero {
-        case .panda:
-            return .panda
-        case .egghead:
-            return .egghead
-        case .spouty:
-            return .spouty
-        default:
-            return .panda
-        }
-    }
+    // enum이 이미 추가 되어있으므로 더이상 추기 필요하지않음
+//    func character(for configuration: DynamicCharacterSelectionIntent) -> CharacterDetail {
+//        switch configuration.hero {
+//        case .panda:
+//            return .panda
+//        case .egghead:
+//            return .egghead
+//        case .spouty:
+//            return .spouty
+//        default:
+//            return .panda
+//        }
+//    }
     
 }
 
@@ -106,7 +107,7 @@ struct EmojiRangerWidget: Widget {
     private let kind: String = "EmojiRangerWidget"
 
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: CharacterSelectionIntent.self, provider: Provider()) { entry in
+        IntentConfiguration(kind: kind, intent: DynamicCharacterSelectionIntent.self, provider: Provider()) { entry in
             EmojiRangerWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Ranger Detail")

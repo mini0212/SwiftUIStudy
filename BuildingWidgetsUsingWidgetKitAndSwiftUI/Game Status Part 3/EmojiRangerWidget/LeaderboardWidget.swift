@@ -60,7 +60,7 @@ struct LeaderboardWidgetEntryView: View {
     }
 }
 
-@main
+//@main
 struct LeaderboardWidget: Widget {
     private let kind: String = "LeaderboardWidget"
 
@@ -71,7 +71,21 @@ struct LeaderboardWidget: Widget {
         .configurationDisplayName("Ranger Leaderboard")
         .description("See all the rangers.")
         .supportedFamilies([.systemLarge])
+        // delegate 대신 사용
+//        .onBackgroundURLSessionEvents { (sessionIdentifier, completion) in
+//            <#code#>
+//        }
     }
+}
+
+@main // < 위젯 갤러리에 보여질 리스트
+struct EmojiBundle: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+        EmojiRangerWidget()
+        LeaderboardWidget()
+    }
+    
 }
 
 struct LeaderboardWidget_Previews: PreviewProvider {
@@ -82,3 +96,6 @@ struct LeaderboardWidget_Previews: PreviewProvider {
         }
     }
 }
+
+
+

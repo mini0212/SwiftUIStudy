@@ -17,7 +17,13 @@ class IntentHandler: INExtension, DynamicCharacterSelectionIntentHandling {
             return hero
         }
         
-        let collection = INObjectCollection(items: characters)
+        let remoteCharacters: [Hero] = CharacterDetail.availableCharacters.map { character in
+            let hero = Hero(identifier: character.name, display: character.name)
+
+            return hero
+        }
+        
+        let collection = INObjectCollection(items: characters + remoteCharacters)
         
         completion(collection, nil)
     }

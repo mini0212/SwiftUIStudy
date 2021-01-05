@@ -18,7 +18,7 @@ struct AllCharactersView: View {
         VStack(spacing: 48) {
             ForEach(
                 characters.sorted { $0.healthLevel > $1.healthLevel }, id: \.self) { character in
-                Link(destination: character.url) {
+                Link(destination: character.url) { // 이게 있으면 클릭시 캐릭터의 url로 이동
                     HStack {
                         Avatar(character: character)
                         VStack(alignment: .leading) {

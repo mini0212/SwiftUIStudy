@@ -5,8 +5,8 @@ Swift UI를 공부해보자
 
 [Widgets Code-along, part 1: The adventure begins](https://developer.apple.com/videos/play/wwdc2020/10034/?time=62)
 
-Next Step -> Design Great Widgets, Build SwiftUI Views for Widgets, Widgets Code-along, part 2: Alternate timelines
-
 [Widgets Code-along, part 2: Alternate timelines](https://developer.apple.com/videos/play/wwdc2020/10035)
 
-Next Step -> Design Great Widgets, Build SuiftUI Views for Widgets, Widgets Code-along, part 3: Advancing timelines
+[Widgets Code-along, part 3: Advancing timelines](https://developer.apple.com/videos/play/wwdc2020/10036)
+
+Next Step -> Design Great Widgets, Build SuiftUI Views for Widgets
